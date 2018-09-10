@@ -6,7 +6,7 @@ git_status=`git status | grep "nothing to commit" | wc -l`
 # git_status=0 means something to add&stash
 echo -e "\033[36m######################\033[0m"
 echo -e "\033[36m#   GIT AUTO REBASE  #\033[0m"
-echo -e "\033[36m#   author ezchuka   #\033[0m"
+echo -e "\033[36m#   author Kaii   #\033[0m"
 echo -e "\033[36m#   version 1.1.2    #\033[0m"
 echo -e "\033[36m######################\033[0m"
 echo

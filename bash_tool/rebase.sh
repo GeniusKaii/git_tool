@@ -7,7 +7,7 @@ git_status=`git status | grep "nothing to commit" | wc -l`
 echo -e "\033[36m######################\033[0m"
 echo -e "\033[36m#   GIT AUTO REBASE  #\033[0m"
 echo -e "\033[36m#   author Kaii      #\033[0m"
-echo -e "\033[36m#   version 1.1.3    #\033[0m"
+echo -e "\033[36m#   version 1.1.4    #\033[0m"
 echo -e "\033[36m######################\033[0m"
 echo
 echo -e "\033[36mAUTO REBASE STARTING\033[0m"

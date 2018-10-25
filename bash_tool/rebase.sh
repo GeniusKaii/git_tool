@@ -61,10 +61,4 @@ else
 	echo -e "\033[35mnothing stashed to pop\033[0m"
 fi
 echo -e $separate_line
-echo -e "\033[35mgit status\033[0m"
-git status
-echo -e $separate_line
-echo -e "\033[35mgit stash list\033[0m"
-git stash list
-echo -e $separate_line
 echo -e "\033[36mAUTO REBASE FINISHED\033[0m"

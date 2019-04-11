@@ -3,7 +3,7 @@ SEPARATE_LINE="\033[35m--------------------------------\033[0m"
 echo -e "\033[36m######################\033[0m"
 echo -e "\033[36m#   GIT AUTO REBASE  #\033[0m"
 echo -e "\033[36m#   author Kaii      #\033[0m"
-echo -e "\033[36m#   version 1.2.0    #\033[0m"
+echo -e "\033[36m#   version 1.2.1    #\033[0m"
 echo -e "\033[36m######################\033[0m"
 echo
 echo -e "\033[36mAUTO REBASE STARTING\033[0m"
@@ -79,7 +79,7 @@ gitStashPop(){
     echo -e "\033[36mAUTO REBASE FINISHED\033[0m"
 }
 
-if [[ "$1"x == "co"x ]]; then
+if [[ "$1"x == "master"x ]]; then
     gitStash
     gitCheckOutMaster
     gitPull

@@ -1,0 +1,48 @@
+[core]
+	eol = lf
+	autocrlf = false
+	filemode = false
+	preloadindex = true
+	fscache = true
+	longpaths = true
+[color]
+	ui = true
+[diff]
+	tool = kdiff3
+[difftool "kdiff3"]
+	path = c:/Program Files/KDiff3/kdiff3.exe
+[difftool]
+	prompt = false
+[merge]
+	tool = kdiff3
+[mergetool "kdiff3"]
+	path = c:/Program Files/KDiff3/kdiff3.exe
+[mergetool]
+	keepBackup = false
+[alias]
+	co = checkout
+	br = branch
+	st = status
+	tree = log --graph --oneline --decorate=full --color=always --branches
+	cp = cherry-pick
+	mt = mergetool
+	review = "!f() { git push -u ${1:-origin} HEAD:`git config branch.$(git name-rev --name-only HEAD).merge | sed -e \"s@refs/heads/@refs/for/@\"`; }; f"
+	com = checkout master
+	rb = rebase master
+	po = push origin HEAD:refs/for/master
+	po1 = push origin HEAD:refs/for/eda1_maint
+[mergetool "kdiff3merge"]
+	trustExitCode = false
+	keepBackup = false
+[branch]
+	autosetuprebase = always
+[gerrit]
+	createchangeid = true
+[push]
+	default = current
+[gc]
+	auto = 256
+[credential]
+	helper = manager
+[http]
+	postBuffer = 524288000

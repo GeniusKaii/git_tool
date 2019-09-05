@@ -3,7 +3,7 @@ SEPARATE_LINE="\033[35m--------------------------------\033[0m"
 echo -e "\033[36m######################\033[0m"
 echo -e "\033[36m#   GIT AUTO REBASE  #\033[0m"
 echo -e "\033[36m#   author Kaii      #\033[0m"
-echo -e "\033[36m#   version 1.2.1    #\033[0m"
+echo -e "\033[36m#   version 1.2.2    #\033[0m"
 echo -e "\033[36m######################\033[0m"
 echo
 echo -e "\033[36mAUTO REBASE STARTING\033[0m"
@@ -71,7 +71,10 @@ gitStashPop(){
     	echo -e "\033[35mgit stash pop\033[0m"
     	git stash pop
     	echo -e "\033[35mgit stash pop completed\033[0m"
-    	git reset HEAD
+    	git_conflict=`git status | grep "CONFLICT" | wc -l`
+    	if [ $git_conflict -eq 0 ]; then
+    	    git reset HEAD
+    	fi
     else
     	echo -e "\033[35mnothing stashed to pop\033[0m"
     fi

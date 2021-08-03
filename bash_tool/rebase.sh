@@ -71,7 +71,7 @@ gitStashPop(){
     	echo -e "\033[35mgit stash pop\033[0m"
     	git stash pop
     	echo -e "\033[35mgit stash pop completed\033[0m"
-    	git_conflict=`git status | grep "CONFLICT" | wc -l`
+    	git_conflict=`git status | grep -i "CONFLICT" | wc -l`
     	if [ $git_conflict -eq 0 ]; then
     	    git reset HEAD
     	fi
